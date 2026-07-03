@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FFXIPL Leaderboard</title>
+
+<link rel="stylesheet" href="leaderboard.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+<header>
+  <h1>🏆 FFXIPL LEADERBOARD</h1>
+  <p>Live Tournament Rankings</p>
+</header>
+
+<!-- ADMIN LOGIN -->
+<div class="admin-box">
+  <input type="password" id="adminPass" placeholder="Admin Password">
+  <button onclick="Auth.login()">Login</button>
+  <span id="adminStatus"></span>
+</div>
+
+<!-- TABLE -->
+<div class="table">
+
+  <div class="row head">
+    <div>RANK</div>
+    <div>TEAM</div>
+    <div>M</div>
+    <div>W</div>
+    <div>L</div>
+    <div>P</div>
+    <div>ACTION</div>
+  </div>
+
+  <div id="tableBody"></div>
+
+</div>
+
+</div>
+
+<!-- EDIT MODAL -->
+<div id="modal" class="modal">
+  <div class="box">
+    <h3>Edit Team</h3>
+
+    <input id="matches" type="number" placeholder="Matches">
+    <input id="wins" type="number" placeholder="Wins">
+    <input id="loss" type="number" placeholder="Loss">
+    <input id="points" type="number" placeholder="Points">
+
+    <button onclick="Editor.save()">Save</button>
+    <button onclick="UI.close()">Close</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="leaderboard.js"></script>
+
+</body>
+</html>

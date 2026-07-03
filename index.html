@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+content="#050505">
+
+<title>FREEFIREXIPL • Season 11</title>
+
+<!-- Google Font -->
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<!-- Global CSS -->
+
+<!-- Home CSS -->
+
+<link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+<div id="app">
+
+<!--======================================
+SPLASH SCREEN
+=======================================-->
+
+<div id="splashScreen">
+
+    <div class="splash-background">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <div class="splash-content">
+
+      <div class="holo-splash">
+
+    <div class="beam"></div>
+
+    <div class="trophy">
+
+        <div class="trophy-core">🏆</div>
+
+    </div>
+
+    <div class="orbit o1"></div>
+    <div class="orbit o2"></div>
+    <div class="orbit o3"></div>
+
+    <div class="holo-text">
+
+        SEASON 11 SYSTEM BOOTING...
+
+    </div>
+
+</div>
+        <h1>
+
+            FREEFIREXIPL
+
+        </h1>
+
+        <p id="loadingText">
+
+            Initializing League...
+
+        </p>
+
+        <div class="loading-bar">
+
+            <div id="loadingProgress"></div>
+
+        </div>
+
+        <div class="loading-percent">
+
+            <span id="loadingValue">
+
+                0%
+
+            </span>
+
+            <small>
+
+                Season 11
+
+            </small>
+
+        </div>
+
+        <div class="version">
+
+            Version 1.0.0
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--======================================
+DRAWER OVERLAY
+=======================================-->
+
+<div id="drawerOverlay"></div>
+
+<!--======================================
+SIDE DRAWER
+=======================================-->
+
+<aside id="sideDrawer">
+
+<div class="drawer-top">
+
+<div class="drawer-avatar">
+
+
+</div>
+
+<div class="drawer-user">
+
+<h3 id="drawerName">
+
+Guest
+
+</h3>
+
+<p id="drawerRole">
+
+Welcome
+
+</p>
+
+</div>
+
+</div>
+
+<nav class="drawer-menu">
+
+<a href="index.html">
+
+🏠
+
+<span>Home</span>
+
+</a>
+
+<a href="league.html">
+
+🏆
+
+<span>League</span>
+
+</a>
+
+<a href="schedule.html">
+
+📅
+
+<span>Schedule</span>
+
+</a>
+
+<a href="teams.html">
+
+🛡
+
+<span>Teams</span>
+
+</a>
+
+<a href="players.html">
+
+👥
+
+<span>Players</span>
+
+</a>
+
+<a href="leaderboard.html">
+
+📈
+
+<span>Leaderboard</span>
+
+</a>
+
+<a href="gallery.html">
+
+🖼
+
+<span>Gallery</span>
+
+</a>
+
+<a href="announcements.html">
+
+📢
+
+<span>Announcements</span>
+
+</a>
+
+<a href="hall-of-fame.html">
+
+👑
+
+<span>Hall of Fame</span>
+
+</a>
+
+<a href="settings.html">
+
+⚙
+
+<span>Settings</span>
+
+</a>
+
+</nav>
+
+<div class="drawer-footer">
+
+<button id="logoutButton">
+
+Logout
+
+</button>
+
+</div>
+
+</aside>
+
+<!--======================================
+APP HEADER
+=======================================-->
+
+<header id="appHeader">
+
+    <div class="header-left">
+
+        <div class="menu-btn premium" id="menuButton">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+        <div class="greeting">
+
+            <h3 id="userGreeting">
+                Good Day Captain
+            </h3>
+
+            <small>
+                FREEFIREXIPL • Season 11
+            </small>
+
+        </div>
+
+    </div>
+
+    <div class="header-right">
+
+       
+
+        <div class="notif" id="notificationButton">
+
+            🔔
+
+            <span id="notificationBadge">0</span>
+
+        </div>
+
+        <div class="profile">
+
+            👤
+
+        </div>
+
+    </div>
+
+</header>
+
+<!--======================================
+MAIN CONTENT STARTS HERE
+=======================================-->
+
+<main id="homePage">
+
+    <!--======================================
+HERO COMMAND CENTER
+=======================================-->
+
+<section class="hero-section">
+
+    <div class="hero-card">
+
+        <div class="hero-top">
+
+            <div>
+
+                <span class="hero-badge">
+
+                    ● LIVE
+
+                </span>
+
+                <h1>
+
+                    Season 11
+
+                </h1>
+
+                <p>
+
+                    FREEFIREXIPL Championship
+
+                </p>
+
+            </div>
+
+            <div class="season-logo">
+
+                S11
+
+            </div>
+
+        </div>
+
+        <div class="hero-stats">
+
+            <div class="hero-stat">
+
+                <span>
+
+                    Teams
+
+                </span>
+
+                <h3 id="heroTeams">
+
+                    8
+
+                </h3>
+
+            </div>
+
+            <div class="hero-stat">
+
+                <span>
+
+                    Players
+
+                </span>
+
+                <h3 id="heroPlayers">
+
+                    50+
+
+                </h3>
+
+            </div>
+
+            <div class="hero-stat">
+
+                <span>
+
+                    Matches
+
+                </span>
+
+                <h3 id="heroMatches">
+
+                    0
+
+                </h3>
+
+            </div>
+
+            <div class="hero-stat">
+
+                <span>
+
+                    Live
+
+                </span>
+
+                <h3 id="heroLive">
+
+                    1
+
+                </h3>
+
+            </div>
+
+        </div>
+
+        <div class="hero-actions">
+
+            <button
+            id="watchLiveButton"
+            class="hero-button primary">
+
+                Watch Live
+
+            </button>
+
+            <button
+            id="scheduleButton"
+            class="hero-button secondary">
+
+                Schedule
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--======================================
+QUICK ACCESS GRID
+=======================================-->
+
+<section class="quick-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Quick Access
+
+        </h2>
+
+        <a href="#">
+
+            View All
+
+        </a>
+
+    </div>
+
+    <div class="quick-grid">
+
+        <a  class="quick-card">
+
+            <div class="quick-icon">📅</div>
+
+            <span>Schedule</span>
+
+        </a>
+
+        <a  class="quick-card">
+
+            <div class="quick-icon">🛡</div>
+
+            <span>Teams</span>
+
+        </a>
+
+        <a class="quick-card">
+
+            <div class="quick-icon">👥</div>
+
+            <span>Players</span>
+
+        </a>
+
+        <a  class="quick-card">
+
+            <div class="quick-icon">🏆</div>
+
+            <span>Standings</span>
+
+        </a>
+
+        <a  class="quick-card">
+
+            <div class="quick-icon">🖼</div>
+
+            <span>Gallery</span>
+
+        </a>
+
+        <a  class="quick-card">
+
+            <div class="quick-icon">📢</div>
+
+            <span>News</span>
+
+        </a>
+
+        <a  class="quick-card">
+
+            <div class="quick-icon">👑</div>
+
+            <span>Hall</span>
+
+        </a>
+
+        <a  class="quick-card">
+
+            <div class="quick-icon">👤</div>
+
+            <span>Profile</span>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!--======================================
+LIVE MATCH CENTER
+=======================================-->
+
+<section class="live-match-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Live Match
+
+        </h2>
+
+        <span class="live-pill">
+
+            ● LIVE
+
+        </span>
+
+    </div>
+
+    <article class="live-match-card">
+
+        <div class="match-status-row">
+
+            <div class="match-stage">
+
+                Match #18
+
+            </div>
+
+            <div class="match-time" id="matchTimer">
+
+                12:46
+
+            </div>
+
+        </div>
+
+        <div class="match-teams">
+
+            <div class="team-block">
+
+                <div class="team-logo">
+
+                    RR
+
+                </div>
+
+                <h3>
+
+                    Rajasthan Royals
+
+                </h3>
+
+                <span>
+
+                    Captain • Pavan Gamer
+
+                </span>
+
+            </div>
+
+            <div class="versus">
+
+                VS
+
+            </div>
+
+            <div class="team-block">
+
+                <div class="team-logo">
+
+                    SRH
+
+                </div>
+
+                <h3>
+
+                    Sunrisers Hyderabad
+
+                </h3>
+
+                <span>
+
+                    Captain • Bala
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="live-score-grid">
+
+            <div class="score-box">
+
+                <span>
+
+                    RR Kills
+
+                </span>
+
+                <strong id="rrKills">
+
+                    18
+
+                </strong>
+
+            </div>
+
+            <div class="score-box">
+
+                <span>
+
+                    SRH Kills
+
+                </span>
+
+                <strong id="srhKills">
+
+                    16
+
+                </strong>
+
+            </div>
+
+            <div class="score-box">
+
+                <span>
+
+                    Zone
+
+                </span>
+
+                <strong id="matchZone">
+
+                    Final
+
+                </strong>
+
+            </div>
+
+            <div class="score-box">
+
+                <span>
+
+                    Status
+
+                </span>
+
+                <strong class="status-live">
+
+                    Running
+
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="match-actions">
+
+            <button
+            class="primary-button"
+            id="watchMatchButton">
+
+                View Match
+
+            </button>
+
+            <button
+            class="secondary-button"
+            id="shareMatchButton">
+
+                Share
+
+            </button>
+
+        </div>
+
+    </article>
+
+</section>
+
+<!--======================================
+TODAY'S MATCHES
+=======================================-->
+
+<section class="today-section">
+
+    <h2 class="section-title">
+    TODAY’S MATCHES
+    <small>Season 11 • Day 1</small>
+</h2>
+
+<div class="match-board">
+
+    <div class="match-card">
+        <div class="teams">Alpha X vs Storm Riders</div>
+        <div class="meta">12:30 PM • Upcoming</div>
+    </div>
+
+    <div class="match-card">
+        <div class="teams">Night Hunters vs Fire Squad</div>
+        <div class="meta">1:15 PM • Live</div>
+    </div>
+
+    <div class="match-card">
+        <div class="teams">War Kings vs Dead Zone</div>
+        <div class="meta">2:00 PM • Upcoming</div>
+    </div>
+
+    <div class="match-card">
+        <div class="teams">Alpha Squad vs Black Ops</div>
+        <div class="meta">3:00 PM • Upcoming</div>
+    </div>
+
+</div>
+
+</section>
+
+<!--======================================
+SEASON SNAPSHOT
+=======================================-->
+
+<section class="snapshot-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Season Snapshot
+
+        </h2>
+
+        <a href="league.html">
+
+            Details
+
+        </a>
+
+    </div>
+
+    <div class="snapshot-grid">
+
+        <div class="snapshot-card">
+
+            <span>
+
+                Current Season
+
+            </span>
+
+            <h3>
+
+                Season 11
+
+            </h3>
+
+        </div>
+
+        <div class="snapshot-card">
+
+            <span>
+
+                League Status
+
+            </span>
+
+            <h3 class="status-live">
+
+                LIVE
+
+            </h3>
+
+        </div>
+
+        <div class="snapshot-card">
+
+            <span>
+
+                Total Teams
+
+            </span>
+
+            <h3 id="totalTeams">
+
+                8
+
+            </h3>
+
+        </div>
+
+        <div class="snapshot-card">
+
+            <span>
+
+                Registered Players
+
+            </span>
+
+            <h3 id="registeredPlayers">
+
+                50+
+
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--======================================
+LEAGUE STANDINGS
+=======================================-->
+
+<section class="standings-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            League Standings
+
+        </h2>
+
+        <a href="leaderboard.html">
+
+            View All
+
+        </a>
+
+    </div>
+
+    <div class="standings-card">
+
+        <div class="standing-row">
+
+            <div class="standing-left">
+
+                <span class="rank gold">
+
+                    1
+
+                </span>
+
+                <strong>
+
+                    RR
+
+                </strong>
+
+            </div>
+
+            <div class="standing-right">
+
+                <small>
+
+                    24 PTS
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <div class="standing-row">
+
+            <div class="standing-left">
+
+                <span class="rank silver">
+
+                    2
+
+                </span>
+
+                <strong>
+
+                    SRH
+
+                </strong>
+
+            </div>
+
+            <div class="standing-right">
+
+                <small>
+
+                    20 PTS
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <div class="standing-row">
+
+            <div class="standing-left">
+
+                <span class="rank bronze">
+
+                    3
+
+                </span>
+
+                <strong>
+
+                    CSK
+
+                </strong>
+
+            </div>
+
+            <div class="standing-right">
+
+                <small>
+
+                    18 PTS
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <div class="standing-row">
+
+            <div class="standing-left">
+
+                <span class="rank">
+
+                    4
+
+                </span>
+
+                <strong>
+
+                    RCB
+
+                </strong>
+
+            </div>
+
+            <div class="standing-right">
+
+                <small>
+
+                    16 PTS
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--======================================
+LEAGUE RECORDS
+=======================================-->
+
+<section class="records-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            League Records
+
+        </h2>
+
+    </div>
+
+    <div class="record-list">
+
+        <div class="record-item">
+
+            <span>
+
+                🏆 Most Titles
+
+            </span>
+
+            <strong>
+
+                RR • 6
+
+            </strong>
+
+        </div>
+
+        <div class="record-item">
+
+            <span>
+
+                👑 Best Captain
+
+            </span>
+
+            <strong>
+
+                Pavan Gamer
+
+            </strong>
+
+        </div>
+
+        <div class="record-item">
+
+            <span>
+
+                💰 Highest Auction
+
+            </span>
+
+            <strong>
+
+                Bala • ₹300
+
+            </strong>
+
+        </div>
+
+        <div class="record-item">
+
+            <span>
+
+                ⚔ Featured Rivalry
+
+            </span>
+
+            <strong>
+
+                RR vs SRH
+
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--======================================
+FEATURED TEAMS
+=======================================-->
+
+<section class="teams-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Featured Teams
+
+        </h2>
+
+        <a href="teams.html">
+
+            All Teams
+
+        </a>
+
+    </div>
+
+    <div class="horizontal-scroll">
+
+        <!-- RR -->
+
+        <article class="team-card">
+
+            <div class="team-top">
+
+                <div class="team-logo">
+
+                    RR
+
+                </div>
+
+                <span class="team-titles">
+
+                    🏆 6
+
+                </span>
+
+            </div>
+
+            <h3>
+
+                Rajasthan Royals
+
+            </h3>
+
+            <p>
+
+                Captain • Pavan Gamer
+
+            </p>
+
+            <div class="team-footer">
+
+                <span>
+
+                    ₹100
+
+                </span>
+
+                <button>
+
+                    View
+
+                </button>
+
+            </div>
+
+        </article>
+
+        <!-- SRH -->
+
+        <article class="team-card">
+
+            <div class="team-top">
+
+                <div class="team-logo">
+
+                    SRH
+
+                </div>
+
+                <span class="team-titles">
+
+                    ₹300
+
+                </span>
+
+            </div>
+
+            <h3>
+
+                Sunrisers Hyderabad
+
+            </h3>
+
+            <p>
+
+                Captain • Bala
+
+            </p>
+
+            <div class="team-footer">
+
+                <span>
+
+                    Highest Auction
+
+                </span>
+
+                <button>
+
+                    View
+
+                </button>
+
+            </div>
+
+        </article>
+
+        <!-- RCB -->
+
+        <article class="team-card">
+
+            <div class="team-top">
+
+                <div class="team-logo">
+
+                    RCB
+
+                </div>
+
+                <span class="team-titles">
+
+                    🏆 2
+
+                </span>
+
+            </div>
+
+            <h3>
+
+                Royal Challengers
+
+            </h3>
+
+            <p>
+
+                Captain • Naresh
+
+            </p>
+
+            <div class="team-footer">
+
+                <span>
+
+                    ₹90
+
+                </span>
+
+                <button>
+
+                    View
+
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!--======================================
+FEATURED PLAYERS
+=======================================-->
+
+<section class="players-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Featured Players
+
+        </h2>
+
+        <a href="players.html">
+
+            View All
+
+        </a>
+
+    </div>
+
+    <div class="horizontal-scroll">
+
+        <article class="player-card">
+
+            <div class="player-avatar">
+
+                PG
+
+            </div>
+
+            <h3>
+
+                Pavan Gamer
+
+            </h3>
+
+            <p>
+
+                RR Captain
+
+            </p>
+
+            <span>
+
+                ⭐ 6 Championships
+
+            </span>
+
+        </article>
+
+        <article class="player-card">
+
+            <div class="player-avatar">
+
+                BL
+
+            </div>
+
+            <h3>
+
+                Bala
+
+            </h3>
+
+            <p>
+
+                SRH Captain
+
+            </p>
+
+            <span>
+
+                ₹300 Auction
+
+            </span>
+
+        </article>
+
+        <article class="player-card">
+
+            <div class="player-avatar">
+
+                NR
+
+            </div>
+
+            <h3>
+
+                Naresh
+
+            </h3>
+
+            <p>
+
+                RCB Captain
+
+            </p>
+
+            <span>
+
+                🏆 2 Championships
+
+            </span>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!--======================================
+TOURNAMENT STATISTICS
+=======================================-->
+
+<section class="stats-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Tournament Statistics
+
+        </h2>
+
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <h3 id="statMatches">
+
+                48
+
+            </h3>
+
+            <p>
+
+                Matches Played
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3 id="statKills">
+
+                1,268
+
+            </h3>
+
+            <p>
+
+                Total Kills
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3 id="statPlayers">
+
+                54
+
+            </h3>
+
+            <p>
+
+                Active Players
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3 id="statViews">
+
+                18K
+
+            </h3>
+
+            <p>
+
+                Match Views
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!--======================================
+LATEST ACTIVITY
+=======================================-->
+
+<section class="activity-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Latest Activity
+
+        </h2>
+
+        <a href="#">
+
+            Live
+
+        </a>
+
+    </div>
+
+    <div id="activityFeed">
+
+        <article class="activity-card">
+
+            <div class="activity-dot live"></div>
+
+            <div>
+
+                <h3>
+
+                    RR submitted Match #18
+
+                </h3>
+
+                <p>
+
+                    2 minutes ago
+
+                </p>
+
+            </div>
+
+        </article>
+
+        <article class="activity-card">
+
+            <div class="activity-dot success"></div>
+
+            <div>
+
+                <h3>
+
+                    Match #17 Approved
+
+                </h3>
+
+                <p>
+
+                    18 minutes ago
+
+                </p>
+
+            </div>
+
+        </article>
+
+        <article class="activity-card">
+
+            <div class="activity-dot warning"></div>
+
+            <div>
+
+                <h3>
+
+                    New Player Registration
+
+                </h3>
+
+                <p>
+
+                    42 minutes ago
+
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!--======================================
+ANNOUNCEMENTS
+=======================================-->
+
+<section class="announcement-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Announcements
+
+        </h2>
+
+        <a href="announcements.html">
+
+            View All
+
+        </a>
+
+    </div>
+
+    <article class="announcement-card">
+
+        <span class="announcement-tag">
+
+            IMPORTANT
+
+        </span>
+
+        <h3>
+
+            Season 11 Week 3 Schedule Released
+
+        </h3>
+
+        <p>
+
+            Captains should verify match timings before today's fixtures.
+
+        </p>
+
+    </article>
+
+</section>
+
+<!--======================================
+GALLERY PREVIEW
+=======================================-->
+
+<section class="gallery-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Gallery
+
+        </h2>
+
+        <a href="gallery.html">
+
+            Open
+
+        </a>
+
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item"></div>
+
+        <div class="gallery-item"></div>
+
+        <div class="gallery-item"></div>
+
+        <div class="gallery-item"></div>
+
+    </div>
+
+</section>
+
+<!--======================================
+SPONSORS
+=======================================-->
+
+<section class="sponsors-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Partners
+
+        </h2>
+
+    </div>
+
+    <div class="sponsor-row">
+
+        <div class="sponsor-card">
+
+            FREEFIREXIPL
+
+        </div>
+
+        <div class="sponsor-card">
+
+            Season 11
+
+        </div>
+
+        <div class="sponsor-card">
+
+            Community
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!--======================================
+BOTTOM NAVIGATION
+=======================================-->
+
+<nav id="bottomNav">
+
+    <a class="active" href="index.html">
+
+        <span>🏠</span>
+
+        <small>Home</small>
+
+    </a>
+
+    <a href="league.html">
+
+        <span>🏆</span>
+
+        <small>League</small>
+
+    </a>
+
+    <a href="schedule.html">
+
+        <span>⚔️</span>
+
+        <small>Matches</small>
+
+    </a>
+
+    <a href="teams.html">
+
+        <span>👥</span>
+
+        <small>Teams</small>
+
+    </a>
+
+    <a href="profile.html">
+
+        <span>👤</span>
+
+        <small>Profile</small>
+
+    </a>
+
+</nav>
+
+<!--======================================
+FLOATING ACTION BUTTON
+=======================================-->
+
+<button id="fabButton">
+
+＋
+
+</button>
+
+<!--======================================
+GLOBAL SEARCH
+=======================================-->
+
+<div id="searchOverlay">
+
+    <div class="search-box">
+
+        <input
+
+        type="search"
+
+        placeholder="Search players, teams, matches...">
+
+    </div>
+
+</div>
+
+<!--======================================
+NOTIFICATION PANEL
+=======================================-->
+
+<div id="notificationPanel">
+
+    <div class="panel-header">
+
+        <h2>
+
+            Notifications
+
+        </h2>
+
+        <button>
+
+            Clear
+
+        </button>
+
+    </div>
+
+    <div id="notificationList">
+
+    </div>
+
+</div>
+
+<!--======================================
+GLOBAL LOADER
+=======================================-->
+
+<div id="globalLoader">
+
+    <div class="loader"></div>
+
+</div>
+
+<!--======================================
+TOAST CONTAINER
+=======================================-->
+
+<div id="toastContainer">
+
+</div>
+
+<!--======================================
+SCRIPTS
+=======================================-->
+
+
+<script src="index.js"></script>
+
+</body>
+
+</html>
