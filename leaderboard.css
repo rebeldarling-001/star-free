@@ -233,3 +233,64 @@ body{
   background:lime;
   border-radius:50%;
 }
+
+@media (max-width: 600px){
+
+  /* smaller font everywhere */
+  *{
+    font-family: system-ui !important;
+  }
+
+  /* title */
+  .title{
+    font-size: 32px !important;
+  }
+
+  /* admin section */
+  .adminBox{
+    padding: 15px !important;
+  }
+
+  input{
+    width: 60% !important;
+    font-size: 14px !important;
+  }
+
+  button{
+    width: 30% !important;
+    font-size: 14px !important;
+  }
+
+  /* leaderboard rows */
+  .row{
+    grid-template-columns: 45px 1.5fr 25px 25px 25px 40px 25px !important;
+    padding: 10px 6px !important;
+  }
+
+  /* team section */
+  .teamRow{
+    gap: 6px !important;
+  }
+
+  /* logo smaller on phone */
+  .teamRow img{
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  /* team name */
+  .teamRow b{
+    font-size: 14px !important;
+  }
+
+  /* fullname below */
+  .teamRow small{
+    font-size: 8px !important;
+    line-height: 1.2;
+  }
+
+  /* numbers */
+  .row div{
+    font-size: 13px !important;
+  }
+}
