@@ -6,61 +6,62 @@
 <title>FFXIPL Leaderboard</title>
 
 <link rel="stylesheet" href="leaderboard.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 </head>
 
 <body>
 
 <div class="app">
 
-<header>
-  <h1>🏆 FFXIPL LEADERBOARD</h1>
-  <p>Live Tournament Rankings</p>
-</header>
-
-<!-- ADMIN LOGIN -->
-<div class="admin-box">
-  <input type="password" id="adminPass" placeholder="Admin Password">
-  <button onclick="Auth.login()">Login</button>
-  <span id="adminStatus"></span>
-</div>
-
-<!-- TABLE -->
-<div class="table">
-
-  <div class="row head">
-    <div>RANK</div>
-    <div>TEAM</div>
-    <div>M</div>
-    <div>W</div>
-    <div>L</div>
-    <div>P</div>
-    <div>ACTION</div>
+  <!-- HEADER -->
+  <div class="header">
+    <div class="title">🏆 FFXIPL LEADERBOARD</div>
+    <div class="sub">▶ LIVE TOURNAMENT RANKINGS ◀</div>
   </div>
 
-  <div id="tableBody"></div>
+  <!-- ADMIN -->
+  <div class="card admin">
 
-</div>
+    <div class="admin-title">🛡 ADMIN ACCESS</div>
 
-</div>
+    <div class="admin-box">
+      <input type="password" id="pass" placeholder="Enter Admin Password">
+      <button onclick="login()">LOGIN</button>
+    </div>
 
-<!-- EDIT MODAL -->
-<div id="modal" class="modal">
-  <div class="box">
-    <h3>Edit Team</h3>
+    <div class="status">
+      Status: <span id="status">🔒 Locked</span>
+    </div>
 
-    <input id="matches" type="number" placeholder="Matches">
-    <input id="wins" type="number" placeholder="Wins">
-    <input id="loss" type="number" placeholder="Loss">
-    <input id="points" type="number" placeholder="Points">
-
-    <button onclick="Editor.save()">Save</button>
-    <button onclick="UI.close()">Close</button>
   </div>
+
+  <!-- TABLE -->
+  <div class="card table">
+
+    <div class="row head">
+      <div>R</div>
+      <div>TEAM</div>
+      <div>M</div>
+      <div>W</div>
+      <div>L</div>
+      <div>PTS</div>
+      <div>🔒</div>
+    </div>
+
+    <div id="rows"></div>
+
+  </div>
+
+  <!-- FOOTER -->
+ <div class="footer">
+  <span>FFXIPL • FEEL THE FIGHT. LIVE THE GLORY.</span>
+  <span class="dot"></span>
+  <span>Real-time Updates</span>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</div>
+
 <script src="leaderboard.js"></script>
-
 </body>
 </html>

@@ -1,123 +1,235 @@
 body{
   margin:0;
-  font-family:Poppins;
-  background:#0a0a0a;
-  color:white;
+  font-family:Arial;
+  background:#0a0a0f;
+  color:#fff;
 }
 
+/* APP */
 .app{
-  padding:20px;
+  max-width:900px;
+  margin:auto;
+  padding:15px;
 }
 
-header{
+/* HEADER */
+.header{
   text-align:center;
-  margin-bottom:20px;
+  margin-bottom:15px;
 }
 
-header h1{
-  color:gold;
+.title{
+  font-size:22px;
+  font-weight:bold;
+  color:#ffb300;
+}
+
+.sub{
+  font-size:12px;
+  color:#aaa;
+  margin-top:5px;
+}
+
+/* CARD */
+.card{
+  background:#111;
+  border:1px solid #222;
+  border-radius:14px;
+  padding:15px;
+  margin-bottom:15px;
+}
+
+/* ADMIN */
+.admin-title{
+  color:#ffb300;
+  font-weight:bold;
+  margin-bottom:10px;
 }
 
 .admin-box{
   display:flex;
   gap:10px;
-  justify-content:center;
-  margin-bottom:20px;
 }
 
-input{
+.admin-box input{
+  flex:1;
   padding:10px;
-  border-radius:6px;
   border:none;
+  border-radius:8px;
+  background:#1a1a1a;
+  color:#fff;
 }
 
-button{
+.admin-box button{
+  background:#ffb300;
+  border:none;
   padding:10px 15px;
-  border:none;
-  background:gold;
-  color:black;
+  border-radius:8px;
   font-weight:bold;
-  cursor:pointer;
-  border-radius:6px;
 }
 
+/* STATUS */
+.status{
+  margin-top:10px;
+  font-size:13px;
+  color:#aaa;
+}
+
+/* TABLE */
 .table{
-  max-width:900px;
-  margin:auto;
+  padding:0;
+  overflow:hidden;
 }
 
+/* ROW */
 .row{
   display:grid;
-  grid-template-columns:80px 1fr repeat(4,60px) 80px;
-  padding:10px;
-  border-bottom:1px solid #333;
+  grid-template-columns:50px 1fr 45px 45px 45px 66px 4px;
+  padding:12px;
+  border-bottom:1px solid #1c1c1c;
+  align-items:center;
+  font-size:13px;
+}
+
+/* HEADER ROW */
+.head{
+  background:#151515;
+  color:#ffb300;
+  font-weight:bold;
+  border-bottom:2px solid #ffb300;
+}
+
+/* RANK */
+.rank{
+  width:26px;
+  height:26px;
+  background:linear-gradient(180deg,#ffcc33,#ff9900);
+  color:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;
+  font-weight:bold;
+  box-shadow:0 0 10px rgba(255,180,0,0.4);
+}
+
+/* TEAM CELL */
+.team{
+  display:flex;
+  flex-direction:column;
+}
+
+.teamRow small{
+  display:block;
+  font-size:12px;
+  color:#8a8a8a;
+  margin-top:2px;
+}
+
+/* POINTS */
+.points{
+  color:#ffb300;
+  font-weight:bold;
+}
+
+/* FOOTER */
+.footer{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  font-size:11px;
+  color:#888;
   align-items:center;
 }
 
-.head{
-  font-weight:bold;
-  color:gold;
+.dot{
+  width:6px;
+  height:6px;
+  background:lime;
+  border-radius:50%;
+}
+.teamRow{
+  display:flex;
+  align-items:center;
+  gap:14px;
 }
 
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.7);
+.logoBox{
+  width:55px;
+  display:flex;
   justify-content:center;
   align-items:center;
 }
 
-.box{
-  background:#111;
-  padding:20px;
-  border-radius:10px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
+
+/* default */
+.teamRow img{
+  object-fit:contain;
+  background:transparent;
+  border:none;
+  border-radius:0;
 }
-@media (max-width: 768px) {
 
-  .app{
-    padding:10px;
-  }
+/* each team custom size */
 
-  header h1{
-    font-size:18px;
-  }
+.KKR{
+  width:700px;
+  height:55px;
+}
 
-  header p{
-    font-size:12px;
-  }
+.CSK{
+  width:44px;
+  height:44px;
+}
 
-  .admin-box{
-    flex-direction:column;
-  }
+.SRH{
+  width:55px;
+  height:55px;
+}
 
-  input{
-    width:100%;
-    font-size:14px;
-  }
+.RCB{
+  width:63px;
+  height:63px;
+}
 
-  button{
-    width:100%;
-    font-size:14px;
-  }
+.MI{
+  width:57px;
+  height:57px;
+}
 
-  .table{
-    width:100%;
-    overflow-x:auto;
-  }
+.RR{
+  width:52px;
+  height:52px;
+}
 
-  .row{
-    grid-template-columns:50px 120px 40px 40px 40px 50px 60px;
-    font-size:12px;
-    padding:8px;
-  }
+.PBKS{
+  width:50px;
+  height:50px;
+}
 
-  .row div{
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-  }
+.DC{
+  width:68px;
+  height:68px;
+}
+
+.teamRow small{
+  display:block;
+  font-size:6px;
+  color:#888;
+}
+.footer{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  font-size:11px;
+  color:#888;
+  margin-top:15px;
+  align-items:center;
+}
+
+.dot{
+  width:6px;
+  height:6px;
+  background:lime;
+  border-radius:50%;
 }

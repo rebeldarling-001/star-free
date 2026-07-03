@@ -1,116 +1,98 @@
-const SUPABASE_URL = "https://ndioutmihxodqknvgfju.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kaW91dG1paHhvZHFrbnZnZmp1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwNTg2NDMsImV4cCI6MjA5ODYzNDY0M30.KeSyXI6DFvYnKbBxICmrmQ8t8eFIoxPn9Ln1aBU0OUk";
+const url = "https://ndioutmihxodqknvgfju.supabase.co";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5kaW91dG1paHhvZHFrbnZnZmp1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwNTg2NDMsImV4cCI6MjA5ODYzNDY0M30.KeSyXI6DFvYnKbBxICmrmQ8t8eFIoxPn9Ln1aBU0OUk";
 
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const client = supabase.createClient(url, key);
 
-/* ================= ADMIN ================= */
+let admin = false;
 
-const Auth = {
-  isAdmin:false,
+// LOGIN
+function login(){
+  const pass = document.getElementById("pass").value.trim();
 
-  login(){
-    const pass = document.getElementById("adminPass").value;
-
-    if(pass === "ffxipl2026"){
-      this.isAdmin = true;
-      document.getElementById("adminStatus").innerText = "✔ Admin";
-      Render.load();
-    } else {
-      alert("Wrong password");
-    }
+  if(pass === "admin123"){
+    admin = true;
+    document.getElementById("status").innerText = "🔓 Unlocked";
+    load();
+  } else {
+    alert("Wrong Password");
   }
-};
+}
 
-/* ================= UI ================= */
+// LOAD
+async function load(){
 
-const UI = {
-  open(team){
-    if(!Auth.isAdmin) return;
+  const { data } = await client
+    .from("leaderboard")
+    .select("*")
+    .order("points",{ascending:false});
 
-    Editor.current = team;
+  render(data);
+}
 
-    matches.value = team.matches;
-    wins.value = team.wins;
-    loss.value = team.loss;
-    points.value = team.points;
+// RENDER
+function render(data){
 
-    document.getElementById("modal").style.display="flex";
-  },
+  const box = document.getElementById("rows");
+  box.innerHTML = ""; // IMPORTANT FIX
 
-  close(){
-    document.getElementById("modal").style.display="none";
+  data.forEach((t, i) => {
+
+    box.innerHTML += `
+<div class="row">
+
+  <div><div class="rank">${i + 1}</div></div>
+
+  <div class="team">
+    <div class="teamRow">
+       <div class="logoBox">
+   <img src="${t.logo}" class="${t.team}">
+</div>
+    
+      <div>
+        <b>${t.team}</b>
+        
+        <small>${t.fullname || ''}</small>
+      </div>
+    </div>
+  </div>
+
+  <div onclick="edit(${t.id},'matches',${t.matches})">${t.matches}</div>
+  <div onclick="edit(${t.id},'wins',${t.wins})">${t.wins}</div>
+  <div onclick="edit(${t.id},'loss',${t.loss})">${t.loss}</div>
+
+  <div onclick="edit(${t.id},'points',${t.points})" class="points">
+    ${t.points}
+  </div>
+
+  <div class="lock">🔒</div>
+
+</div>
+    `;
+
+  });
+}
+
+
+// EDIT ANY FIELD
+async function edit(id, field, value){
+
+  if(!admin){
+    alert("Admin only");
+    return;
   }
-};
 
-/* ================= EDIT ================= */
+  const v = prompt("Edit " + field, value);
+  if(v === null) return;
 
-const Editor = {
-  current:null,
+  const obj = {};
+  obj[field] = parseInt(v);
 
-  async save(){
+  await client
+    .from("leaderboard")
+    .update(obj)
+    .eq("id", id);
 
-    await supabaseClient
-      .from("leaderboard")
-      .update({
-        matches:+matches.value,
-        wins:+wins.value,
-        loss:+loss.value,
-        points:+points.value
-      })
-      .eq("id", this.current.id);
+  load();
+}
 
-    UI.close();
-    Render.load();
-  }
-};
-
-/* ================= RENDER ================= */
-
-const Render = {
-
-  async load(){
-
-    const { data } = await supabaseClient
-      .from("leaderboard")
-      .select("*")
-      .order("points",{ascending:false});
-
-    const table = document.getElementById("tableBody");
-    table.innerHTML="";
-
-    data.forEach((t,i)=>{
-
-      let rank = i===0?"🏆":i===1?"🥈":i===2?"🥉":"#"+(i+1);
-
-      table.innerHTML += `
-        <div class="row">
-          <div>${rank}</div>
-          <div>${t.team}</div>
-          <div>${t.matches}</div>
-          <div>${t.wins}</div>
-          <div>${t.loss}</div>
-          <div>${t.points}</div>
-          <div>
-            ${Auth.isAdmin ? `<button onclick='UI.open(${JSON.stringify(t)})'>Edit</button>` : "🔒"}
-          </div>
-        </div>
-      `;
-    });
-  }
-};
-
-/* ================= REALTIME ================= */
-
-supabaseClient
-  .channel('live')
-  .on('postgres_changes',{
-    event:'*',
-    schema:'public',
-    table:'leaderboard'
-  },()=>{
-    Render.load();
-  })
-  .subscribe();
-
-/* INIT */
-Render.load();
+load();
