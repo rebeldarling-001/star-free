@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Profile</h1>
+
+    <a href="index.html" class="home-btn">
+        ⬅ Back to Home
+    </a>
+</header>
+
+<!-- Profile Header -->
+<section class="profile-header">
+
+    <div class="avatar">
+        <img id="selectedAvatar" src="assets/images/avatars/avatar1.png">
+    </div>
+
+    <div class="player-info">
+        <h2>Player Name</h2>
+        <span class="badge">👑 Super User</span>
+    </div>
+
+</section>
+
+<h3 class="choose-avatar-title">Choose Avatar</h3>
+
+<div class="avatar-list">
+
+    <img src="assets/images/avatars/avatar1.png" onclick="changeAvatar(this.src)">
+    <img src="assets/images/avatars/avatar2.png" onclick="changeAvatar(this.src)">
+    <img src="assets/images/avatars/avatar3.png" onclick="changeAvatar(this.src)">
+    <img src="assets/images/avatars/avatar4.png" onclick="changeAvatar(this.src)">
+    <img src="assets/images/avatars/avatar5.png" onclick="changeAvatar(this.src)">
+    
+
+</div>
+    <!-- Player Details -->
+   
+
+</section>
+
+<!-- Profile Screenshot -->
+<section class="profile-card">
+
+    <h3>Free Fire Profile Screenshot</h3>
+
+    <div class="screenshot-box">
+
+    <label for="profileScreenshot" class="upload-btn">
+        📷 Upload Screenshot
+    </label>
+
+    <input
+        type="file"
+        id="profileScreenshot"
+        accept="image/*"
+        hidden>
+
+    <p id="fileName">No file selected</p>
+
+</div>
+
+</section>
+
+<!-- Information Cards -->
+<section class="profile-details">
+
+   <div class="card">
+    <h4>Real Name</h4>
+
+    <input
+        type="text"
+        id="realName"
+        placeholder="Enter your real name">
+</div>
+
+<div class="card">
+    <h4>Free Fire UID</h4>
+
+    <input
+        type="text"
+        id="gameUid"
+        placeholder="Enter your Free Fire UID">
+</div>
+
+    <div class="card">
+        <h4>Badge</h4>
+        <p>Super User</p>
+    </div>
+
+  <button id="saveProfile">
+    Save Profile
+</button>
+
+</section>
+<script src="profile.js"></script>
+
+</body>
