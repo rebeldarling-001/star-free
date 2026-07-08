@@ -272,11 +272,7 @@ body{
     gap: 6px !important;
   }
 
-  /* logo smaller on phone */
-  .teamRow img{
-    width: 32px !important;
-    height: 32px !important;
-  }
+  
 
   /* team name */
   .teamRow b{

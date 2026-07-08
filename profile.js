@@ -18,3 +18,35 @@ fileInput.addEventListener("change", function () {
     }
 
 });
+
+document.getElementById("profileScreenshot").addEventListener("change", function(e){
+
+    const file = e.target.files[0];
+
+    const reader = new FileReader();
+
+    reader.onload = function(){
+        let box = document.querySelector(".screenshot-box");
+        box.innerHTML = `<img src="${reader.result}" style="width:100%;border-radius:12px;">`;
+    }
+
+    reader.readAsDataURL(file);
+});
+
+document.getElementById("saveProfile").addEventListener("click", function(){
+
+    let name = document.getElementById("realName").value;
+    let uid = document.getElementById("gameUid").value;
+
+    if(!name){
+        alert("Please enter real name");
+        return;
+    }
+
+    if(!uid){
+        alert("Please enter game UID");
+        return;
+    }
+
+    alert("Profile Ready to Save 🚀");
+});
