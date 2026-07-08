@@ -17,7 +17,9 @@ body{
   text-align:center;
   margin-bottom:15px;
 }
-
+.head div:nth-child(2){
+    margin-left:39px;
+}
 .title{
   font-size:22px;
   font-weight:bold;
@@ -70,9 +72,12 @@ body{
 
 /* STATUS */
 .status{
-  margin-top:10px;
-  font-size:13px;
-  color:#aaa;
+    margin-top:15px;
+    text-align:center;
+    font-size:16px;
+    font-weight:bold;
+    color:#ff7b00;
+    transition:all .4s ease;
 }
 
 /* TABLE */
@@ -290,3 +295,105 @@ body{
     font-size: 13px !important;
   }
 }
+
+/* ===== ADMIN PRO ===== */
+
+.admin{
+    transition:.4s;
+}
+
+.admin-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.lock-icon{
+    font-size:34px;
+    transition:.5s;
+}
+
+.lock-icon.unlock{
+    transform:rotate(-20deg) scale(1.2);
+}
+
+.admin.active{
+    border:2px solid #ffb300;
+    box-shadow:
+    0 0 15px #ffb300,
+    0 0 35px rgba(255,179,0,.5);
+}
+
+.status{
+    text-align:center;
+    margin-top:15px;
+    font-weight:bold;
+    transition:.4s;
+}
+
+.status.loading{
+    color:#ffb300;
+}
+
+.status.success{
+    color:#00ff66;
+    text-shadow:0 0 10px #00ff66;
+}
+
+.status.error{
+    color:#ff4444;
+}
+
+@keyframes glow{
+
+0%{
+box-shadow:0 0 0 #ffb300;
+}
+
+50%{
+box-shadow:0 0 30px #ffb300;
+}
+
+100%{
+box-shadow:0 0 15px #ffb300;
+}
+
+}
+
+.admin.active{
+    animation:glow .8s;
+}
+
+.lock{
+    font-size:18px;
+    text-align:center;
+    transition:0.4s;
+}
+
+.unlockAnim{
+    animation:unlockGlow .7s ease;
+    color:#00ff66;
+    text-shadow:0 0 10px #00ff66;
+}
+
+@keyframes unlockGlow{
+    0%{
+        transform:rotate(-25deg) scale(.6);
+        opacity:0;
+    }
+
+    50%{
+        transform:rotate(15deg) scale(1.3);
+    }
+
+    100%{
+        transform:rotate(0deg) scale(1);
+        opacity:1;
+    }
+}
+
+#overlay{
+    display:none !important;
+}
+

@@ -7,15 +7,50 @@ let admin = false;
 
 // LOGIN
 function login(){
-  const pass = document.getElementById("pass").value.trim();
 
-  if(pass === "admin123"){
-    admin = true;
-    document.getElementById("status").innerText = "🔓 Unlocked";
-    load();
-  } else {
-    alert("Wrong Password");
-  }
+    const pass=document.getElementById("pass").value.trim();
+
+    const status=document.getElementById("status");
+
+    const card=document.getElementById("adminCard");
+
+    const lock=document.getElementById("lockIcon");
+
+    if(pass==="admin123"){
+
+        status.className="status loading";
+        status.innerHTML="🔄 Authenticating...";
+
+        setTimeout(()=>{
+
+            lock.innerHTML="🔓";
+            lock.classList.add("unlock");
+
+            card.classList.add("active");
+
+            status.className="status success";
+            status.innerHTML="🟢 ADMIN MODE ENABLED";
+
+            admin=true;
+
+            load();
+
+        },1200);
+
+    }else{
+
+        status.className="status error";
+        status.innerHTML="❌ ACCESS DENIED";
+
+        setTimeout(()=>{
+
+            status.className="status";
+            status.innerHTML="🔒 Locked";
+
+        },1500);
+
+    }
+
 }
 
 // LOAD
@@ -64,7 +99,9 @@ function render(data){
     ${t.points}
   </div>
 
-  <div class="lock">🔒</div>
+<div class="lock ${admin ? 'unlockAnim' : ''}">
+    ${admin ? '🔓' : '🔒'}
+</div>
 
 </div>
     `;
@@ -96,3 +133,11 @@ async function edit(id, field, value){
 }
 
 load();
+const menuButton = document.getElementById("menuButton");
+const sideDrawer = document.getElementById("sideDrawer");
+
+menuButton.onclick = function(){
+
+    sideDrawer.classList.toggle("open");
+
+}

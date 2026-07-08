@@ -21,20 +21,31 @@
   </div>
 
   <!-- ADMIN -->
-  <div class="card admin">
 
-    <div class="admin-title">🛡 ADMIN ACCESS</div>
+<div class="card admin" id="adminCard">
+
+    <div class="admin-top">
+
+        <div class="admin-title">
+            🛡 ADMIN ACCESS
+        </div>
+
+        <div id="lockIcon" class="lock-icon">
+            🔒
+        </div>
+
+    </div>
 
     <div class="admin-box">
-      <input type="password" id="pass" placeholder="Enter Admin Password">
-      <button onclick="login()">LOGIN</button>
+        <input type="password" id="pass" placeholder="Enter Admin Password">
+        <button onclick="login()">LOGIN</button>
     </div>
 
-    <div class="status">
-      Status: <span id="status">🔒 Locked</span>
+    <div id="status" class="status">
+        🔒 Locked
     </div>
 
-  </div>
+</div>
 
   <!-- TABLE -->
   <div class="card table">
