@@ -6,7 +6,7 @@ team:"Team Alpha",
 id:"FF100001",
 level:"80",
 avatar:"avatar1.png",
-profile:"avatar1.png"
+profile:"id.png"
 },
 
 {
@@ -15,7 +15,7 @@ team:"Team Fire",
 id:"FF100002",
 level:"85",
 avatar:"avatar2.png",
-profile:"avatar2.png"
+profile:"avatar1.png"
 },
 
 {
@@ -24,7 +24,7 @@ team:"Team Phoenix",
 id:"FF100003",
 level:"78",
 avatar:"avatar3.png",
-profile:"avatar3.png"
+profile:"avatar2.png"
 },
 
 {
@@ -33,7 +33,7 @@ team:"Team Bravo",
 id:"FF100004",
 level:"90",
 avatar:"avatar4.png",
-profile:"avatar4.png"
+profile:"avatar3.png"
 },
 
 {
@@ -42,7 +42,7 @@ team:"Team Titans",
 id:"FF100005",
 level:"88",
 avatar:"avatar5.png",
-profile:"avatar5.png"
+profile:"avatar4.png"
 },
 
 {
@@ -51,7 +51,7 @@ team:"Team Galaxy",
 id:"FF100006",
 level:"76",
 avatar:"avatar6.png",
-profile:"avatar6.png"
+profile:"avatar5.png"
 },
 
 {
