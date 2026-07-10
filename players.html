@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Players</title>
+
+    <link rel="stylesheet" href="players.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+<!-- Back to Home -->
+    <a href="index.html" class="home-back-btn">
+        <i class="fa-solid fa-chevron-left"></i>
+        Home
+    </a>
+    <!-- Hero Banner -->`
+
+    <div class="hero">
+
+        <div class="hero-top">
+
+            <div>
+
+                <h1>
+                    <i class="fa-solid fa-users"></i>
+                    Players
+                </h1>
+
+                <p>FFXIPL Season 11</p>
+
+            </div>
+
+            <div class="badge">
+
+                50+
+
+            </div>
+
+        </div>
+
+        <div class="hero-bottom">
+
+            <div>
+
+                <h2>Professional Players</h2>
+
+                <span>Click any player to view profile</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Players -->
+
+    <div id="playersContainer"></div>
+
+<!-- Profile -->
+</div>
+
+<div id="playerProfile" class="hidden">
+
+    <button id="backBtn">
+    <i class="fa-solid fa-arrow-left"></i>
+</button>
+
+    <div class="profile-banner">
+        <img id="profileImage">
+    </div>
+
+    <div class="profile-content">
+
+        <h2 id="profileName"></h2>
+
+        <div class="box">
+            <small>🏆TEAM</small>
+            <h3 id="profileTeam"></h3>
+        </div>
+
+        <div class="box">
+            <small>⚡LEVEL</small>
+            <h3 id="profileLevel"></h3>
+        </div>
+
+        <div class="box">
+            <small>🎮FF ID</small>
+            <h3 id="profileId"></h3>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="fireTransition"></div>
+
+<script src="players.js"></script>
+
+</body>
+
+</html>
