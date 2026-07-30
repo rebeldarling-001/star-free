@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FFXIPL Teams</title>
+
+<link rel="stylesheet" href="teamsdupe.css">
+</head>
+
+<body>
+
+<div class="teams-page">
+
+    <!-- PAGE TITLE -->
+
+    <div class="page-header">
+
+        <h1>🏆 OFFICIAL FRANCHISES</h1>
+
+        <p>Tap any team to view complete franchise details.</p>
+
+    </div>
+
+
+    <!-- TEAM GRID -->
+
+    <div class="teams-grid">
+
+        <div class="team-card" onclick="openTeam(0)">
+            <img src="KKRLOGO.png">
+            <h3>KKR</h3>
+        </div>
+
+        <div class="team-card" onclick="openTeam(1)">
+            <img src="CSKLOGO.png">
+            <h3>CSK</h3>
+        </div>
+
+        <div class="team-card" onclick="openTeam(2)">
+            <img src="SRHLOGO.png">
+            <h3>SRH</h3>
+        </div>
+
+        <div class="team-card" onclick="openTeam(3)">
+            <img src="RCBLOGO.png">
+            <h3>RCB</h3>
+        </div>
+
+        <div class="team-card" onclick="openTeam(4)">
+            <img src="MILOGO.png">
+            <h3>MI</h3>
+        </div>
+
+        <div class="team-card" onclick="openTeam(5)">
+            <img src="RRLOGO.png">
+            <h3>RR</h3>
+        </div>
+
+        <div class="team-card" onclick="openTeam(6)">
+            <img src="PBKSLOGO.png">
+            <h3>PBKS</h3>
+        </div>
+
+        <div class="team-card" onclick="openTeam(7)">
+            <img src="images/dc.png">
+            <h3>DC</h3>
+        </div>
+
+        <div class="team-card" onclick="openTeam(8)">
+            <img src="images/gt.png">
+            <h3>GT</h3>
+        </div>
+
+        <div class="team-card" onclick="openTeam(9)">
+            <img src="images/lsg.png">
+            <h3>LSG</h3>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- OVERLAY -->
+
+<div class="overlay" id="overlay" onclick="closeTeam()"></div>
+
+
+<!-- TEAM DETAILS -->
+
+<div class="team-popup" id="teamPopup">
+
+    <button class="close-btn" onclick="closeTeam()">✕</button>
+
+    <img id="popupLogo">
+
+    <h2 id="popupName"></h2>
+
+    <div class="detail-row">
+        <span>👤 Owner</span>
+        <b id="popupOwner"></b>
+    </div>
+
+    <div class="detail-row">
+        <span>💰 Franchise Cost</span>
+        <b id="popupPrice"></b>
+    </div>
+
+    <div class="detail-row">
+        <span>🏆 Titles</span>
+        <b id="popupTitles"></b>
+    </div>
+
+    <div class="detail-row">
+        <span>⭐ Captain</span>
+        <b id="popupCaptain"></b>
+    </div>
+
+    <div class="detail-row">
+        <span>👥 Players</span>
+        <b id="popupPlayers"></b>
+    </div>
+
+    <button class="view-btn">
+        VIEW FULL TEAM
+    </button>
+
+</div>
+
+<script src="teamsdupe.js"></script>
+
+</body>
+</html>

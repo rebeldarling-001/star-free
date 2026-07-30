@@ -1,0 +1,190 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+    font-family:Arial,sans-serif;
+}
+
+.teams-page{
+    width:95%;
+    margin:20px auto;
+}
+
+.page-header{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.page-header h1{
+    color:#ffb300;
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.page-header p{
+    color:#9a9a9a;
+    font-size:13px;
+}
+
+/*==========================
+TEAM GRID
+==========================*/
+
+.teams-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.team-card{
+    background:#111;
+    border:2px solid #242424;
+    border-radius:18px;
+    padding:18px;
+    text-align:center;
+    cursor:pointer;
+    transition:.35s;
+    box-shadow:0 0 12px rgba(255,179,0,.08);
+}
+
+.team-card:hover{
+    transform:translateY(-5px);
+    border-color:#ffb300;
+    box-shadow:0 0 20px rgba(255,179,0,.35);
+}
+
+.team-card img{
+    width:95px;
+    height:95px;
+    object-fit:contain;
+    margin-bottom:12px;
+    transition:.35s;
+}
+
+.team-card:hover img{
+    transform:scale(1.08);
+}
+
+.team-card h3{
+    font-size:18px;
+    color:#fff;
+    letter-spacing:1px;
+}
+
+/*==========================
+POPUP
+==========================*/
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(6px);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:100;
+}
+
+.overlay.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.team-popup{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:-100%;
+    background:#111;
+    border-radius:25px 25px 0 0;
+    padding:25px;
+    transition:.45s;
+    z-index:101;
+    box-shadow:0 -8px 30px rgba(0,0,0,.5);
+}
+
+.team-popup.show{
+    bottom:0;
+}
+
+.close-btn{
+    position:absolute;
+    top:15px;
+    right:18px;
+    width:36px;
+    height:36px;
+    border:none;
+    border-radius:50%;
+    background:#222;
+    color:#fff;
+    font-size:18px;
+}
+
+#popupLogo{
+    width:110px;
+    height:110px;
+    display:block;
+    margin:10px auto;
+    object-fit:contain;
+}
+
+#popupName{
+    text-align:center;
+    margin:12px 0 20px;
+    color:#ffb300;
+}
+
+.detail-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 0;
+    border-bottom:1px solid #222;
+}
+
+.detail-row span{
+    color:#bbb;
+}
+
+.detail-row b{
+    color:#fff;
+}
+
+.view-btn{
+    width:100%;
+    margin-top:22px;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#ffb300,#ff7b00);
+    color:#000;
+    font-size:15px;
+    font-weight:bold;
+}
+
+/*==========================
+PHONE
+==========================*/
+
+@media(max-width:480px){
+
+.team-card img{
+    width:82px;
+    height:82px;
+}
+
+.team-card{
+    padding:16px;
+}
+
+.page-header h1{
+    font-size:24px;
+}
+
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FREEFIREXIPL ADMIN</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+
+<!-- LOGIN -->
+
+<div id="loginScreen" class="login-card">
+
+
+<div class="logo">
+
+FREEFIRE<span>XIPL</span>
+
+</div>
+
+
+<h2>
+ADMIN LOGIN
+</h2>
+
+
+<input 
+type="password"
+id="password"
+placeholder="Enter Password">
+
+
+<button id="loginBtn">
+LOGIN
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ADMIN -->
+
+
+<div id="adminScreen" class="hidden">
+
+
+
+<header>
+
+
+<div>
+
+<h1>
+FREEFIRE<span>XIPL</span>
+</h1>
+
+<p>
+SEASON 11 ADMIN
+</p>
+
+</div>
+
+
+<button id="logoutBtn">
+LOGOUT
+</button>
+
+
+</header>
+
+
+<button id="backBtn">
+← BACK
+</button>
+
+
+
+
+
+<!-- DATE CONTROL -->
+
+
+<section class="card">
+
+
+<div class="title">
+
+
+<h2>
+MATCH DAYS
+</h2>
+
+
+<button id="openCalendar">
+
++ ADD DATE
+
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- CALENDAR -->
+
+
+<div id="calendarBox" class="calendar hidden">
+
+
+<input 
+type="date"
+id="datePicker">
+
+
+<div>
+
+
+<button id="createDate">
+CREATE
+</button>
+
+
+<button id="closeCalendar">
+CANCEL
+</button>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- ALL DATES -->
+
+
+<div id="dates">
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- MATCH EDIT -->
+
+
+<section class="card">
+
+
+<h2>
+SELECTED DATE
+</h2>
+
+
+<h3 id="selectedDate">
+No Date Selected
+</h3>
+
+
+
+<div id="matches">
+
+</div>
+
+
+
+<button id="save">
+
+SAVE CHANGES
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+<div id="saveMessage" class="save-message">
+✓ Changes Saved
+</div>
+
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>

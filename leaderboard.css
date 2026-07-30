@@ -397,3 +397,97 @@ box-shadow:0 0 15px #ffb300;
     display:none !important;
 }
 
+/*========================
+HEADER
+========================*/
+
+.top-header{
+position:relative;
+height:58px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin:-15px -15px 18px -15px;
+padding:0 12px;
+background:#101010;
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.logo-box{
+display:flex;
+flex-direction:column;
+align-items:center;
+position:absolute;
+left:48%;
+transform:translateX(-50%);
+}
+
+.logo-title{
+font-size:18px;
+font-weight:700;
+letter-spacing:.52px;
+}
+
+.gold{
+color:#D6A93C;
+}
+
+.white{
+color:#fff;
+}
+
+.season{
+font-size:8px;
+letter-spacing:2px;
+color:#9c9c9c;
+margin-top:-2px;
+}
+
+.x-return-btn{
+height:40px;
+display:flex;
+align-items:center;
+gap:7px;
+padding:0 10px;
+background:linear-gradient(135deg,#171717,#0b0b0b);
+border:1px solid rgba(214,169,60,.3);
+border-radius:13px;
+cursor:pointer;
+transition:.25s;
+}
+
+.x-return-btn:hover{
+border-color:#D6A93C;
+box-shadow:0 0 15px rgba(214,169,60,.15);
+}
+
+.return-icon{
+width:26px;
+height:26px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#D6A93C;
+color:#111;
+border-radius:8px;
+font-size:12px;
+}
+
+.return-text{
+display:flex;
+flex-direction:column;
+line-height:10px;
+text-align:left;
+}
+
+.return-text span{
+font-size:7px;
+letter-spacing:2px;
+color:#888;
+}
+
+.return-text b{
+font-size:11px;
+letter-spacing:1px;
+color:#D6A93C;
+}

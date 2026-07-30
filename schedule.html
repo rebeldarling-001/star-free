@@ -9,14 +9,14 @@ content="width=device-width,initial-scale=1.0">
 <title>FREEFIREXIPL Schedule</title>
 
 <link rel="stylesheet"
-href="schedule1.css">
+href="schedule.css">
 
 <link
 href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap"
 rel="stylesheet">
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
 
 </head>
 
@@ -28,8 +28,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <header class="top-header">
 
-<button class="menu-btn">
-<i class="fas fa-bars"></i>
+<button class="x-return-btn" id="homeButton">
+
+<div class="return-icon">
+<i class="fas fa-house"></i>
+</div>
+
+<div class="return-text">
+<span>BASE</span>
+<b></b>
+</div>
+
 </button>
 
 <div class="logo-box">
@@ -48,17 +57,10 @@ SEASON 11
 
 </div>
 
-<button class="notify-btn">
 
-<i class="far fa-bell"></i>
-
-<span class="notify-dot"></span>
-
-</button>
-<button id="adminBtn" class="admin-btn">
-    <i class="fas fa-user-shield"></i>
-</button>
 </header>
+
+
 
 <!-- BANNER -->
 
@@ -158,225 +160,7 @@ LIVE
 
 <!-- MATCH LIST -->
 
-<div id="matchContainer">
-
-<!-- LIVE CARD -->
-
-<div class="match-card live">
-
-<div class="status">
-
-LIVE
-
-</div>
-
-<div class="team">
-
-<img
-src="SRHLOGO.png">
-
-<h3>SRH</h3>
-
-<p>Sunrisers Hyderabad</p>
-
-</div>
-
-<div class="center">
-
-<div class="match-no">
-MATCH 01
-</div>
-
-<div class="vs">
-VS
-</div>
-
-<div class="time">
-03:00 PM
-</div>
-
-<div class="map">
-BERMUDA
-</div>
-
-</div>
-
-<div class="team">
-
-<img
-src="RCBLOGO.png">
-
-<h3>RCB</h3>
-
-<p>Royal Challengers</p>
-
-</div>
-
-</div>
-
-<!-- CARD -->
-
-<div class="match-card">
-
-<div class="status upcoming">
-
-UPCOMING
-
-</div>
-
-<div class="team">
-
-<img
-src="images/teams/kkr.png">
-
-<h3>KKR</h3>
-
-<p>Kolkata Knight Riders</p>
-
-</div>
-
-<div class="center">
-
-<div class="match-no">
-MATCH 02
-</div>
-
-<div class="vs">
-VS
-</div>
-
-<div class="time">
-05:30 PM
-</div>
-
-<div class="map">
-BERMUDA
-</div>
-
-</div>
-
-<div class="team">
-
-<img
-src="images/teams/mi.png">
-
-<h3>MI</h3>
-
-<p>Mumbai Indians</p>
-
-</div>
-
-</div>
-
-<!-- CARD -->
-
-<div class="match-card">
-
-<div class="status upcoming">
-
-UPCOMING
-
-</div>
-
-<div class="team">
-
-<img
-src="images/teams/dc.png">
-
-<h3>DC</h3>
-
-<p>Delhi Capitals</p>
-
-</div>
-
-<div class="center">
-
-<div class="match-no">
-MATCH 03
-</div>
-
-<div class="vs">
-VS
-</div>
-
-<div class="time">
-08:00 PM
-</div>
-
-<div class="map">
-BERMUDA
-</div>
-
-</div>
-
-<div class="team">
-
-<img
-src="images/teams/pbks.png">
-
-<h3>PBKS</h3>
-
-<p>Punjab Kings</p>
-
-</div>
-
-</div>
-
-<!-- CARD -->
-
-<div class="match-card">
-
-<div class="status upcoming">
-
-UPCOMING
-
-</div>
-
-<div class="team">
-
-<img
-src="images/teams/rr.png">
-
-<h3>RR</h3>
-
-<p>Rajasthan Royals</p>
-
-</div>
-
-<div class="center">
-
-<div class="match-no">
-MATCH 04
-</div>
-
-<div class="vs">
-VS
-</div>
-
-<div class="time">
-09:30 PM
-</div>
-
-<div class="map">
-BERMUDA
-</div>
-
-</div>
-
-<div class="team">
-
-<img
-src="images/teams/csk.png">
-
-<h3>CSK</h3>
-
-<p>Chennai Super Kings</p>
-
-</div>
-
-</div>
-
-</div>
+<div id="matchContainer"></div>
 
 <!-- VIEW ALL -->
 
@@ -401,149 +185,15 @@ results
 
 
 </div>
-<!-- ==========================
-ADMIN LOGIN POPUP
-========================== -->
-
-<div id="adminOverlay" class="admin-overlay">
-
-<div class="admin-box">
-
-<h2>ADMIN LOGIN</h2>
-
-<p>Enter Password</p>
-
-<input
-type="password"
-id="adminPassword"
-placeholder="Password">
-
-<div class="admin-buttons">
-
-<button id="cancelAdmin">
-
-Cancel
-
-</button>
-
-<button id="loginAdmin">
-
-Login
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ==========================
-ADMIN MODE BAR
-========================== -->
-
-<div id="adminBar" class="admin-bar">
-
-<span>👑 ADMIN MODE</span>
-
-<button id="unlockNext">
-Unlock Next Day
-</button>
-
-<button id="exitAdmin">
-Exit
-</button>
-
-</div>
-
-
-<!-- ADMIN PANEL -->
-<div id="adminPanel" class="admin-panel">
-
-    <div class="panel-head">
-        <h3>ADMIN PANEL</h3>
-    </div>
-
-    <button id="nextDayBtn">
-        📅 Open Next Day
-    </button>
-<button id="lockPreviousBtn">
-🔒 Lock Previous Day
-</button>
-
-    <button id="logoutBtn">
-        🚪 Logout
-    </button>
-<div class="panel-head">
-MATCH EDITOR
-</div>
-
-
-<div class="panel-head">
-MATCH EDITOR
-</div>
-
-
-<select id="editDay">
-
-<option value="08 FEB">08 FEB</option>
-<option value="09 FEB">09 FEB</option>
-<option value="10 FEB">10 FEB</option>
-<option value="11 FEB">11 FEB</option>
-<option value="12 FEB">12 FEB</option>
-
-</select>
-
-
-<select id="editMatch">
-
-<option value="0">MATCH 01</option>
-<option value="1">MATCH 02</option>
-<option value="2">MATCH 03</option>
-<option value="3">MATCH 04</option>
-
-</select>
 
 
 
-<div class="team-select">
 
-<p>TEAM 1</p>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-<div class="team-options">
+<script src="supabase.js"></script>
 
-<button data-team="SRH">SRH</button>
-<button data-team="RCB">RCB</button>
-<button data-team="CSK">CSK</button>
-<button data-team="MI">MI</button>
-
-</div>
-
-</div>
-
-
-
-<div class="team-select">
-
-<p>TEAM 2</p>
-
-<div class="team-options">
-
-<button data-team="RR">RR</button>
-<button data-team="KKR">KKR</button>
-<button data-team="DC">DC</button>
-<button data-team="PBKS">PBKS</button>
-
-</div>
-
-</div>
-
-
-<button id="saveEdit">
-SAVE CHANGES
-</button>
-</div>
-<script src="schedule1.js"></script>
+<script src="schedule.js"></script>
 
 </body>
 

@@ -133,11 +133,8 @@ async function edit(id, field, value){
 }
 
 load();
-const menuButton = document.getElementById("menuButton");
-const sideDrawer = document.getElementById("sideDrawer");
 
-menuButton.onclick = function(){
-
-    sideDrawer.classList.toggle("open");
-
-}
+// HOME BUTTON
+document.getElementById("homeButton").onclick = () => {
+    window.location.href = "index.html";
+};
