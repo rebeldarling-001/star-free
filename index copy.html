@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+content="#050505">
+
+<title>FREEFIREXIPL • Season 11</title>
+
+<!-- Google Font -->
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="index copy.css">
+
+</head>
+
+<body>
+
+<div id="app">
+
+<!--======================================
+SPLASH SCREEN
+=======================================-->
+
+<div id="splashScreen">
+
+    <div class="splash-background">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <div class="splash-content">
+
+      <div class="holo-splash">
+
+    <div class="beam"></div>
+
+    <div class="trophy">
+
+        <div class="trophy-core">🏆</div>
+
+    </div>
+
+    <div class="orbit o1"></div>
+    <div class="orbit o2"></div>
+    <div class="orbit o3"></div>
+
+    <div class="holo-text">
+
+        SEASON 11 SYSTEM BOOTING...
+
+    </div>
+
+</div>
+        <h1>
+
+            FREEFIREXIPL
+
+        </h1>
+
+        <p id="loadingText">
+
+            Initializing League...
+
+        </p>
+
+        <div class="loading-bar">
+
+            <div id="loadingProgress"></div>
+
+        </div>
+
+        <div class="loading-percent">
+
+            <span id="loadingValue">
+
+                0%
+
+            </span>
+
+            <small>
+
+                Season 11
+
+            </small>
+
+        </div>
+
+        <div class="version">
+
+            Version 1.0.0
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--======================================
+DRAWER OVERLAY
+=======================================-->
+
+<div id="drawerOverlay"></div>
+
+<!--======================================
+SIDE DRAWER
+=======================================-->
+
+<aside id="sideDrawer">
+
+<div class="drawer-top">
+
+<div class="drawer-avatar">
+
+
+</div>
+
+<div class="drawer-user">
+
+<h3 id="drawerName">
+
+Guest
+
+</h3>
+
+<p id="drawerRole">
+
+Welcome
+
+</p>
+
+</div>
+
+</div>
+
+<nav class="drawer-menu">
+
+<a href="index.html">
+
+🏠
+
+<span>Home</span>
+
+</a>
+
+<a href="league.html">
+
+🏆
+
+<span>League</span>
+
+</a>
+
+<a href="schedule.html">
+
+📅
+
+<span>Schedule</span>
+
+</a>
+
+<a href="teams1.html">
+
+🛡
+
+<span>Teams</span>
+
+</a>
+
+<a href="players.html">
+
+👥
+
+<span>Players</span>
+
+</a>
+
+<a href="leaderboard.html">
+
+📈
+
+<span>Leaderboard</span>
+
+</a>
+
+<a href="cri.html">
+
+🖼
+
+<span>Gallery</span>
+
+</a>
+
+<a href="announcements.html">
+
+📢
+
+<span>Announcements</span>
+
+</a>
+
+<a href="hall-of-fame.html">
+
+👑
+
+<span>Hall of Fame</span>
+
+</a>
+
+<a href="settings.html">
+
+⚙
+
+<span>Settings</span>
+
+</a>
+
+</nav>
+
+<div class="drawer-footer">
+
+<button id="logoutButton">
+
+Logout
+
+</button>
+
+</div>
+
+</aside>
+
+<!--======================================
+APP HEADER
+=======================================-->
+
+<header id="appHeader">
+
+    <div class="header-left">
+
+        <div class="menu-btn premium" id="menuButton">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+        <div class="greeting">
+
+            <h3 id="userGreeting">
+                Good Day Captain
+            </h3>
+
+            <small>
+                FREEFIREXIPL • Season 11
+            </small>
+
+        </div>
+
+    </div>
+
+    <div class="header-right">
+
+       
+
+        <div class="notif" id="notificationButton">
+
+            🔔
+
+            <span id="notificationBadge">0</span>
+
+        </div>
+
+        
+
+</header>
+
+<!--======================================
+MAIN CONTENT STARTS HERE
+=======================================-->
+
+<main id="homePage">
+    
+  <!-- Hero -->
+  <section class="hero rv rv-1">
+    <canvas id="hero-embers"></canvas>
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Registrations Open</div>
+      <h1 class="headline">Play. Compete.<br><span class="accent">Conquer.</span></h1>
+      <p class="hero-sub">The official home of FREEFIRE XIPL — live standings, match schedules, and everything Season 11.</p>
+      <div class="hero-actions">
+        <a href="schedule.html" class="btn btn-gold">Join Tournament
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+        <a href="schedule.html" class="btn btn-ghost">View Schedule</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Announcement -->
+  <div class="announcement rv rv-2" style="margin-top:20px;">
+    <div class="ann-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+    </div>
+    <div class="ann-body">
+      <div class="ann-label">Announcement</div>
+      <div class="ann-text">Registration for Season 11 is now OPEN!</div>
+    </div>
+    <a href="schedule.html" class="ann-more">View All
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+  </div>
+<!--======================================
+QUICK ACCESS GRID
+=======================================-->
+
+<section class="quick-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Quick Access
+
+        </h2>
+
+        <a href="#">
+
+            View All
+
+        </a>
+
+    </div>
+
+    <div class="quick-grid">
+
+        <a  class="quick-card">
+
+            <div class="quick-icon">📅</div>
+
+            <span>Schedule</span>
+
+        </a>
+
+        <a  class="quick-card">
+
+            <div class="quick-icon">🛡</div>
+
+            <span>Teams</span>
+
+        </a>
+
+        <a class="quick-card">
+
+            <div class="quick-icon">👥</div>
+
+            <span>Players</span>
+
+        </a>
+
+        <a  class="quick-card">
+
+            <div class="quick-icon">🏆</div>
+
+            <span>Standings</span>
+
+        </a>
+
+        <a  class="quick-card">
+
+            <div class="quick-icon">🖼</div>
+
+            <span>Gallery</span>
+
+        </a>
+
+        <a  class="quick-card">
+
+            <div class="quick-icon">📢</div>
+
+            <span>News</span>
+
+        </a>
+
+        <a  class="quick-card">
+
+            <div class="quick-icon">👑</div>
+
+            <span>Hall</span>
+
+        </a>
+
+        <a  class="quick-card">
+
+            <div class="quick-icon">🔨</div>
+
+            <span>Rules</span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!--======================================
+SEASON SNAPSHOT
+=======================================-->
+
+<section class="snapshot-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Season Snapshot
+
+        </h2>
+
+        <a href="league.html">
+
+            Details
+
+        </a>
+
+    </div>
+
+    <div class="snapshot-grid">
+
+        <div class="snapshot-card">
+
+            <span>
+
+                Current Season
+
+            </span>
+
+            <h3>
+
+                Season 11
+
+            </h3>
+
+        </div>
+
+        <div class="snapshot-card">
+
+            <span>
+
+                League Status
+
+            </span>
+
+            <h3 class="status-live">
+
+                LIVE
+
+            </h3>
+
+        </div>
+
+        <div class="snapshot-card">
+
+            <span>
+
+                Total Teams
+
+            </span>
+
+            <h3 id="totalTeams">
+
+                8
+
+            </h3>
+
+        </div>
+
+        <div class="snapshot-card">
+
+            <span>
+
+                Registered Players
+
+            </span>
+
+            <h3 id="registeredPlayers">
+
+                50+
+
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!--======================================
+TOURNAMENT STATISTICS
+=======================================-->
+
+<section class="stats-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Tournament Statistics
+
+        </h2>
+
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <h3 id="statMatches">
+
+                48
+
+            </h3>
+
+            <p>
+
+                Matches Played
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3 id="statKills">
+
+                1,268
+
+            </h3>
+
+            <p>
+
+                Total Kills
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3 id="statPlayers">
+
+                54
+
+            </h3>
+
+            <p>
+
+                Active Players
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3 id="statViews">
+
+                18K
+
+            </h3>
+
+            <p>
+
+                Match Views
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!--======================================
+LATEST ACTIVITY
+=======================================-->
+
+<section class="activity-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Latest Activity
+
+        </h2>
+
+        <a href="#">
+
+            Live
+
+        </a>
+
+    </div>
+
+    <div id="activityFeed">
+
+        <article class="activity-card">
+
+            <div class="activity-dot live"></div>
+
+            <div>
+
+                <h3>
+
+                    RR submitted Match #18
+
+                </h3>
+
+                <p>
+
+                    2 minutes ago
+
+                </p>
+
+            </div>
+
+        </article>
+
+        <article class="activity-card">
+
+            <div class="activity-dot success"></div>
+
+            <div>
+
+                <h3>
+
+                    Match #17 Approved
+
+                </h3>
+
+                <p>
+
+                    18 minutes ago
+
+                </p>
+
+            </div>
+
+        </article>
+
+        <article class="activity-card">
+
+            <div class="activity-dot warning"></div>
+
+            <div>
+
+                <h3>
+
+                    New Player Registration
+
+                </h3>
+
+                <p>
+
+                    42 minutes ago
+
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!--======================================
+SPONSORS
+=======================================-->
+
+<section class="sponsors-section">
+
+    <div class="section-header">
+
+        <h2>
+
+            Partners
+
+        </h2>
+
+    </div>
+
+    <div class="sponsor-row">
+
+        <div class="sponsor-card">
+
+            FREEFIREXIPL
+
+        </div>
+
+        <div class="sponsor-card">
+
+            Season 11
+
+        </div>
+
+        <div class="sponsor-card">
+
+            Community
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!--======================================
+BOTTOM NAVIGATION
+=======================================-->
+
+<nav id="bottomNav">
+
+    <a class="active" href="index.html">
+
+        <span>🏠</span>
+
+        <small>Home</small>
+
+    </a>
+
+    <a href="league.html">
+
+        <span>🏆</span>
+
+        <small>League</small>
+
+    </a>
+
+    <a href="schedule.html">
+
+        <span>⚔️</span>
+
+        <small>Matches</small>
+
+    </a>
+
+    <a href="teams1.html">
+
+        <span>👥</span>
+
+        <small>Teams</small>
+
+    </a>
+
+    <a href="rules.html">
+
+        <span>🔨</span>
+
+        <small>Rules</small>
+
+    </a>
+
+</nav>
+
+<!--======================================
+FLOATING ACTION BUTTON
+=======================================-->
+
+<button id="fabButton">
+
+＋
+
+</button>
+
+<!--======================================
+GLOBAL SEARCH
+=======================================-->
+
+<div id="searchOverlay">
+
+    <div class="search-box">
+
+        <input
+
+        type="search"
+
+        placeholder="Search players, teams, matches...">
+
+    </div>
+
+</div>
+
+<!--======================================
+NOTIFICATION PANEL
+=======================================-->
+
+<div id="notificationPanel">
+
+    <div class="panel-header">
+
+        <h2>
+
+            Notifications
+
+        </h2>
+
+        <button>
+
+            Clear
+
+        </button>
+
+    </div>
+
+    <div id="notificationList">
+
+    </div>
+
+</div>
+
+<!--======================================
+GLOBAL LOADER
+=======================================-->
+
+<div id="globalLoader">
+
+    <div class="loader"></div>
+
+</div>
+<!--======================================
+TOAST CONTAINER
+=======================================-->
+
+<div id="toastContainer">
+
+</div>
+
+<!--======================================
+SCRIPTS
+=======================================-->
+
+
+<script src="index copy.js"></script>
+
+</body>
+
+</html>
